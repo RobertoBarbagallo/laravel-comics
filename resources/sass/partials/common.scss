@@ -2,5 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: blue;
 }
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: $light_font;
+}
+
+.container{
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+}
+
+.flex-container{
+    @include flex_default; 
+}
+
+.whitespace{
+    flex-grow: 1;
+}
+
+ul{
+    @include flex_default;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $primary_color;
+}
+
+.btn{
+    @include flex_default;
+    padding: $base_spacing / 2;
+    width: fit-content;
+
+    &.default{
+        color: $background_color;
+        background-color: $primary_color;
+    }
+
+    &.invisible{
+        color: $background_color;
+        border: 2px solid $primary_color;
+        background-color: transparent;
+    }
+}
+

@@ -1,0 +1,9 @@
+.firstheader{
+    background-color: $primary_color;
+    color: $background_color;
+    .header-option{
+        padding: $base_spacing /4 $base_spacing *2;
+        font-size: $base_font_size *2.5;
+        font-weight: $regular_font;
+    }
+}

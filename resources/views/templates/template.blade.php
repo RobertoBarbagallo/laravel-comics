@@ -12,6 +12,22 @@
     <title>@yield('page_title')</title>
 </head>
 <body>
-    
+    <header>
+        <div class="firstheader">
+            <div class="container">
+                <div class="flex-container">
+                    <div class="whitespace">
+                    </div>
+                    <div class="header-option">DC POWER &#8480; VISA &reg;
+                    </div>
+                    <div class="header-option">ADDITIONAL DC SITES &#9660;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondeheader">
+        </div>
+    </header>
 </body>
 </html>
