@@ -12,7 +12,7 @@
 section {
     background-color: $main_background_color;
     position: relative;
-    padding: $base_spacing;
+    padding: $base_spacing/2 0;
 
     .abs-btn {
         font-weight: $bold_font;
@@ -55,6 +55,7 @@ section {
 .blue-container{
     background-color: $primary_color;
     padding: $base_spacing*4;
+    margin-bottom: -$base_spacing/2;
 
     ul{
         justify-content: space-around;
