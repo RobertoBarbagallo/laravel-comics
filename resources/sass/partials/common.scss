@@ -13,10 +13,12 @@ body{
     max-width: 1080px;
     width: 100%;
     margin: auto;
+    height: inherit
 }
 
 .flex-container{
     @include flex_default; 
+    height: inherit;
 }
 
 .whitespace{
@@ -26,11 +28,11 @@ body{
 ul{
     @include flex_default;
     list-style: none;
+    height: inherit;
 }
 
 a{
     text-decoration: none;
-    color: $primary_color;
 }
 
 .btn{

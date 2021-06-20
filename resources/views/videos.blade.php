@@ -1,3 +1,3 @@
 @extends('templates.template')
 
-@section('page_title', 'News')
+@section('page_title', 'Videos')

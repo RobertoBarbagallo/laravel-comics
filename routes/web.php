@@ -37,9 +37,9 @@ Route::get('/collectibles', function () {
     return view('collectibles');
 })->name("collectibles");
 
-Route::get('/video', function () {
-    return view('video');
-})->name("video");
+Route::get('/videos', function () {
+    return view('videos');
+})->name("videos");
 
 Route::get('/fans', function () {
     return view('fans');
