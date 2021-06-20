@@ -24,12 +24,12 @@
     li{
         padding: 0 $base_spacing;
         border-bottom: 2px solid transparent;
-        height: 78px;
+        height: 80px;
         a{
             color: black;
             font-weight: $regular_font;
             font-size: $base_font_size *3;
-            line-height: 78px;
+            line-height: 80px;
             span{
                 color: $primary_color;
                 font-size: $base_font_size*2;
@@ -38,12 +38,12 @@
         }
         &:hover{
             color: $primary_color;
-            border-bottom: 2px solid $primary_color;
+            border-bottom: 3px solid $primary_color;
         }
 
         &.hovered{
             color: $primary_color;
-            border-bottom: 2px solid $primary_color;
+            border-bottom: 3px solid $primary_color;
         }
         
     }
