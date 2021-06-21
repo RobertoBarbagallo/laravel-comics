@@ -26,7 +26,7 @@
                         $actualRoute = Request::route()->getName();
 
                         if($actualRoute == $selectedRoute){
-                            return "hovered";
+                            return "clicked";
                         };
                     }
                     @endphp

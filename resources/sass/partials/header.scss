@@ -23,7 +23,7 @@
     
     li{
         padding: 0 $base_spacing;
-        border-bottom: 2px solid transparent;
+        border-bottom: 4px solid transparent;
         height: 80px;
         a{
             color: black;
@@ -36,14 +36,12 @@
                 vertical-align: baseline;
             }
         }
-        &:hover{
-            color: $primary_color;
-            border-bottom: 3px solid $primary_color;
-        }
 
-        &.hovered{
+        &.clicked{
             color: $primary_color;
-            border-bottom: 3px solid $primary_color;
+            border-bottom: 4px solid $primary_color;
+            transition: .3s;
+
         }
         
     }
