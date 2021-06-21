@@ -21,17 +21,26 @@
                         <img src="images/dc-logo.png" alt="logo">
                     </div>
                     <div class="whitespace"></div>
+                    @php
+                    function setClass($selectedRoute){
+                        $actualRoute = Request::route()->getName();
+
+                        if($actualRoute == $selectedRoute){
+                            return "hovered";
+                        };
+                    }
+                    @endphp
                     <ul>
-                        <li><a href="{{ route ('characters') }}">CHARACTERS</a></li>
-                        <li class="hovered"><a href="{{ route ('comics') }}">COMICS</a></li>
-                        <li><a href="{{ route ('movies') }}">MOVIES</a></li>
-                        <li><a href="{{ route ('tv') }}">TV</a></li>
-                        <li><a href="{{ route ('games') }}">GAMES</a></li>
-                        <li><a href="{{ route ('collectibles') }}">COLLECTIBLES</a></li>
-                        <li><a href="{{ route ('videos') }}">VIDEOS</a></li>
-                        <li><a href="{{ route ('fans') }}">FANS</a></li>
-                        <li><a href="{{ route ('news') }}">NEWS</a></li>
-                        <li><a href="{{ route ('shop') }}">SHOP <span>&#9660;</span></a></li>
+                        <li class={{setClass('characters')}}><a href="{{ route ('characters') }}">CHARACTERS</a></li>
+                        <li class={{setClass('comics')}}><a href="{{ route ('comics') }}">COMICS</a></li>
+                        <li class={{setClass('movies')}}><a href="{{ route ('movies') }}">MOVIES</a></li>
+                        <li class={{setClass('tv')}}><a href="{{ route ('tv') }}">TV</a></li>
+                        <li class={{setClass('games')}}><a href="{{ route ('games') }}">GAMES</a></li>
+                        <li class={{setClass('collectibles')}}><a href="{{ route ('collectibles') }}">COLLECTIBLES</a></li>
+                        <li class={{setClass('videos')}}><a href="{{ route ('videos') }}">VIDEOS</a></li>
+                        <li class={{setClass('fans')}}><a href="{{ route ('fans') }}">FANS</a></li>
+                        <li class={{setClass('news')}}><a href="{{ route ('news') }}">NEWS</a></li>
+                        <li class={{setClass('shop')}}><a href="{{ route ('shop') }}">SHOP <span>&#9660;</span></a></li>
                     </ul>
                     <div class="searchbar">
                         Search <i class="fas fa-search"></i>
