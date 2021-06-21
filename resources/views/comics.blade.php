@@ -11,7 +11,9 @@
     <div class="card-container">
         @foreach($comicsArray as $comic)
         <div class="card">
+        <a href="{{route('singleComic', ['id' => $comic['id']])}}">
             <img src="{{ $comic['thumb'] }}" alt="thumb">
+         </a>   
             <h3>{{ $comic['title'] }}</h3>
         </div>
         @endforeach
