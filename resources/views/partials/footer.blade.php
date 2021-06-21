@@ -45,7 +45,7 @@
                 <a href="">Cookies Settings</a>
             </p>
             <div class="img-container">
-                <img src="images/dc-logo-bg.png" alt="big logo">
+                <img src={{ asset ("images/dc-logo-bg.png")}} alt="big logo">
             </div>
         </div>
     </div>
@@ -57,11 +57,11 @@
                 <div class="whitespace"></div>
                 <div class="socialfolder flex-container">
                     <h3>FOLLOW US</h3>
-                    <a href=""><img src="images/footer-facebook.png" alt="facebook"></a>
-                    <a href=""><img src="images/footer-twitter.png" alt="twitter"></a>
-                    <a href=""><img src="images/footer-youtube.png" alt="youtube"></a>
-                    <a href=""><img src="images/footer-pinterest.png" alt="pinterest"></a>
-                    <a href=""><img src="images/footer-periscope.png" alt="periscope"></a>
+                    <a href=""><img src={{ asset ("images/footer-facebook.png")}} alt="facebook"></a>
+                    <a href=""><img src={{ asset ("images/footer-twitter.png")}} alt="twitter"></a>
+                    <a href=""><img src={{ asset ("images/footer-youtube.png")}} alt="youtube"></a>
+                    <a href=""><img src={{ asset ("images/footer-pinterest.png")}} alt="pinterest"></a>
+                    <a href=""><img src={{ asset ("images/footer-periscope.png")}} alt="periscope"></a>
                 </div>
             </div>
         </div>

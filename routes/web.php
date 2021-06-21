@@ -58,21 +58,18 @@ Route::get('/shop', function () {
 })->name("shop");
 
 Route::get('/singleComic/{id}', function ($id) {
-
-    @dump($id);
     $comicsList = config('comics');
-    @dump($comicsList);
-    
+    $savedComic = null;
     foreach ($comicsList as $comic) {
-        @dump($comic['id']);
-        
-        
-        if($comic['id'] !==  intval($id)){
-            return abort(404, "prodotto non trovato");
-        }else{
-            return view('singleComic', [
-                'comic' => $comic['id'] = intval($id)
-            ]);
+        if ($comic['id'] ===  intval($id)) {
+            $savedComic = $comic;
         }
+    }
+    if (is_null($savedComic)) {
+        return abort(404, "prodotto non trovato");
+    } else {
+        return view('singleComic', [
+            'comic' => $savedComic
+        ]);
     }
 })->name("singleComic");

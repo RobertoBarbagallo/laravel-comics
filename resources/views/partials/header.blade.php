@@ -18,7 +18,7 @@
                 <div class="flex-container">
 
                     <div class="logo-container">
-                        <img src="images/dc-logo.png" alt="logo">
+                        <img src={{ asset ("images/dc-logo.png")}} alt="logo">
                     </div>
                     <div class="whitespace"></div>
                     @php

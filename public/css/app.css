@@ -16,6 +16,16 @@ body {
   height: inherit;
 }
 
+.container.small {
+  max-width: 920px;
+}
+
+.container.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .flex-container {
   display: flex;
   align-items: center;
@@ -134,17 +144,20 @@ a {
 section {
   background-color: black;
   position: relative;
-  padding: 7.5px 0;
 }
 
-section .abs-btn {
+section .blacksection {
+  padding: 15px 0;
+}
+
+section .blacksection .abs-btn {
   font-weight: 700;
   font-size: 20px;
   position: absolute;
   top: -18px;
 }
 
-section .card-container {
+section .blacksection .card-container {
   display: flex;
   align-items: center;
   padding: 45px 0;
@@ -152,13 +165,13 @@ section .card-container {
   justify-content: space-between;
 }
 
-section .card-container .card {
+section .blacksection .card-container .card {
   width: calc(100% / 6);
   height: 200px;
   padding: 30px;
 }
 
-section .card-container .card img {
+section .blacksection .card-container .card img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -167,28 +180,42 @@ section .card-container .card img {
      object-position: top;
 }
 
-section .card-container .card h3 {
+section .blacksection .card-container .card h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
 }
 
-section .btn {
+section .blacksection .btn {
   margin: auto;
 }
 
-.blue-container {
+section .blue-bar {
+  height: 60px;
+  background-color: #0480F6;
+  position: relative;
+}
+
+section .blue-bar img {
+  width: 150px;
+  position: absolute;
+  bottom: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section .blue-container {
   background-color: #0480F6;
   padding: 60px;
   margin-bottom: -7.5px;
 }
 
-.blue-container ul {
+section .blue-container ul {
   justify-content: space-around;
 }
 
-.blue-container ul li img {
+section .blue-container ul li img {
   width: 50px;
   height: 50px;
   -o-object-fit: contain;
@@ -197,9 +224,110 @@ section .btn {
   margin: 15px;
 }
 
-.blue-container ul li a {
+section .blue-container ul li a {
   color: white;
   font-weight: 400;
+}
+
+section .whitesection {
+  background-color: white;
+  padding: 30px 0;
+}
+
+section .whitesection .comic-text {
+  width: calc((100% /3)*2);
+}
+
+section .whitesection .comic-text h2 {
+  font-weight: 700;
+  font-size: 25px;
+  padding: 30px 0;
+}
+
+section .whitesection .comic-text .price-bar {
+  display: flex;
+  align-items: center;
+  background-color: #55BA59;
+  color: #B9F980;
+  height: 40px;
+}
+
+section .whitesection .comic-text .price-bar p {
+  padding: 0 5px;
+}
+
+section .whitesection .comic-text .price-bar .white {
+  color: white;
+}
+
+section .whitesection .comic-text .price-bar .status {
+  height: 40px;
+  line-height: 40px;
+  border-right: 1px solid #367739;
+}
+
+section .whitesection .comic-text p {
+  padding: 15px 0;
+  font-weight: 400;
+}
+
+section .whitesection .adv-container {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  color: #555555;
+}
+
+section .whitesection .adv-container img {
+  padding: 15px 0 15px 15px;
+}
+
+section .greysection {
+  background-color: #F6F6F6;
+  padding: 30px 0;
+}
+
+section .greysection .talent,
+section .greysection .specs {
+  width: calc((100%/2) - 15px);
+  margin-right: 15px;
+  float: left;
+}
+
+section .greysection .talent h2,
+section .greysection .specs h2 {
+  padding-bottom: 37.5px;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+section .greysection .talent p,
+section .greysection .specs p {
+  padding: 7.5px 0;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+section .greysection .talent a,
+section .greysection .specs a {
+  color: #0480F6;
+}
+
+section .greybar {
+  padding: 15px 0;
+  background-color: #F6F6F6;
+  border-top: 1px solid #E3E3E3;
+}
+
+section .greybar ul {
+  justify-content: space-between;
+}
+
+section .greybar ul li {
+  padding: 0 15px;
+}
+
+section .greybar ul li a {
+  color: #D8D8D8;
+  font-weight: 700;
 }
 
 .firstfooter {
