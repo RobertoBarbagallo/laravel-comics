@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class ComicsController extends Controller
 {
-    function  comics () {
+    public function  comics () {
         $comicsList = config('comics');
         return view('comics', [
             "comicsArray" => $comicsList
         ]);
     }
 
-    function singleComic ($id) {
+    public function singleComic ($id) {
         $comicsList = config('comics');
         $savedComic = null;
         foreach ($comicsList as $comic) {
