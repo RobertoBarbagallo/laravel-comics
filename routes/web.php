@@ -17,13 +17,9 @@ Route::get('/characters', function () {
     return view('characters');
 })->name("characters");
 
-Route::get('/', function () {
+Route::get('/', "ComicsController@comics")->name("comics");
 
-    $comicsList = config('comics');
-    return view('comics', [
-        "comicsArray" => $comicsList
-    ]);
-})->name("comics");
+Route::get('/singleComic/{id}', "ComicsController@singleComic")->name("singleComic");
 
 Route::get('/movies', function () {
     return view('movies');
@@ -57,19 +53,3 @@ Route::get('/shop', function () {
     return view('shop');
 })->name("shop");
 
-Route::get('/singleComic/{id}', function ($id) {
-    $comicsList = config('comics');
-    $savedComic = null;
-    foreach ($comicsList as $comic) {
-        if ($comic['id'] ===  intval($id)) {
-            $savedComic = $comic;
-        }
-    }
-    if (is_null($savedComic)) {
-        return abort(404, "prodotto non trovato");
-    } else {
-        return view('singleComic', [
-            'comic' => $savedComic
-        ]);
-    }
-})->name("singleComic");
