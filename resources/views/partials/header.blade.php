@@ -22,17 +22,16 @@
                     </div>
                     <div class="whitespace"></div>
                     @php
-                    function setClass($selectedRoute){
+                    function setClass(...$selectedRoutes){
                         $actualRoute = Request::route()->getName();
+                        $contains= array_search($actualRoute, $selectedRoutes);
 
-                        if($actualRoute == $selectedRoute){
-                            return "clicked";
-                        };
+                        return $contains !== false ? "clicked" : "";
                     }
                     @endphp
                     <ul>
                         <li class={{setClass('characters')}}><a href="{{ route ('characters') }}">CHARACTERS</a></li>
-                        <li class={{setClass('comics')}}><a href="{{ route ('comics') }}">COMICS</a></li>
+                        <li class={{setClass('comics', 'singleComic')}}><a href="{{ route ('comics') }}">COMICS</a></li>
                         <li class={{setClass('movies')}}><a href="{{ route ('movies') }}">MOVIES</a></li>
                         <li class={{setClass('tv')}}><a href="{{ route ('tv') }}">TV</a></li>
                         <li class={{setClass('games')}}><a href="{{ route ('games') }}">GAMES</a></li>
